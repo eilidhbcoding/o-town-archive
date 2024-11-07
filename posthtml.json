@@ -11,9 +11,6 @@
         "posthtml-expressions": {
             "root": "./src/views",
             "removeScriptLocals": true
-        },
-        "posthtml-md": {
-            "root": "./src/views"
         }
     }
 }

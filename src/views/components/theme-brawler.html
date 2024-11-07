@@ -4,7 +4,7 @@
 <script locals>
     let result = { title: '', altPage: '' };
 
-    if (locals.lang == 'en') {
+    if (locals.lang === 'en') {
         switch (locals.page) {
             case 'welcome':
                 result.title = "Welcome";
@@ -49,7 +49,12 @@
 
 <head>
     <title>{{ title }}</title>
-    <module href="/components/head.html"></module>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
 </head>
 
 <body class="post-template page-template page">
@@ -80,14 +85,20 @@
 
         <nav class="menu_brawler" role="navigation">
             <ul>
-                <li><a href="http://otownshowdown.com/g/welcome/"
-                        class='{{ page == "welcome" ? "active" : ""}}'>Home</a></li>
-                <li><a href="http://otownshowdown.com/g/results/"
-                        class='{{ page == "welcome" ? "results" : ""}}'>Results</a></li>
-                <li><a href="http://otownshowdown.com/g/media/" class='{{ page == "media" ? "active" : ""}}'>Photos
-                        &amp; Videos</a></li>
-                <li><a href="http://otownshowdown.com/g/history/"
-                        class='{{ page == "welcome" ? "history" : ""}}'>Lindy</a></li>
+                <if condition="lang === 'en'">
+                    <li><a href="./welcome.html" class='{{ page == "welcome" ? "active" : ""}}'>Home</a></li>
+                    <li><a href="./results.html" class='{{ page == "results" ? "active" : ""}}'>Results</a></li>
+                    <li><a href="./media.html" class='{{ page == "media" ? "active" : ""}}'>Photos
+                            &amp; Videos</a></li>
+                    <li><a href="./history.html" class='{{ page == "history" ? "active" : ""}}'>Lindy</a></li>
+                </if>
+                <else>
+                    <li><a href="./accueil.html" class='{{ page == "welcome" ? "active" : ""}}'>Bienvenue</a></li>
+                    <li><a href="./resultats.html" class='{{ page == "results" ? "active" : ""}}'>Résultats</a></li>
+                    <li><a href="./photos-videos.html" class='{{ page == "media" ? "active" : ""}}'>Photos
+                            &amp; vidéos</a></li>
+                    <li><a href="./histoire.html" class='{{ page == "history" ? "active" : ""}}'>Lindy</a></li>
+                </else>
             </ul>
         </nav>
 
