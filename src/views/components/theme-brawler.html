@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<script locals>
+    let result = { title: '', altPage: '' };
+
+    if (locals.lang == 'en') {
+        switch (locals.page) {
+            case 'welcome':
+                result.title = "Welcome";
+                result.altPage = "accueil";
+                break;
+            case 'results':
+                result.title = "Results";
+                result.altPage = "accueil";
+                break;
+            case 'media':
+                result.title = "Photos & Videos";
+                result.altPage = "accueil";
+                break;
+            case 'history':
+                result.title = "Lindy";
+                result.altPage = "accueil";
+                break;
+        }
+    } else {
+        switch (locals.page) {
+            case 'welcome':
+                result.title = "Bienvenue";
+                result.altPage = "welcome";
+                break;
+            case 'results':
+            case 'media':
+            case 'history':
+        }
+    }
+
+    module.exports = result;
+</script>
+
+<head>
+    <title>{{ title }}</title>
+    <module href="/components/head.html"></module>
+</head>
+
+<body class="post-template page-template page">
+
+    <div class="wrapper_brawler">
+
+        <div role="banner" class="header_brawler clear">
+            <a class="logo_brawler" href="http://otownshowdown.com/g">
+                <img src="./images/banner_{{ lang }}.png" alt="O-Town Showdown">
+            </a>
+            <h1 class="blogtitle_brawler">
+                <a title="O-Town Showdown" href="http://otownshowdown.com/g">
+                    <span class="title_1">O-Town</span>
+                    <span class="title_2">Showdown</span>
+                    <span class="title_3">
+                        <span class="title_3_1">OTAWA, CANADA</span>
+                    </span>
+                </a>
+            </h1>
+            <div class="event_date">
+                <p>
+                    <time class="date_brawler" datetime="Tuesday 05 November, 2024" itemprop="datePublished">
+                        MARCH<br>— 7<sup>TH</sup> —<br>2015
+                    </time>
+                </p>
+            </div>
+        </div>
+
+        <nav class="menu_brawler" role="navigation">
+            <ul>
+                <li><a href="http://otownshowdown.com/g/welcome/"
+                        class='{{ page == "welcome" ? "active" : ""}}'>Home</a></li>
+                <li><a href="http://otownshowdown.com/g/results/">Results</a></li>
+                <li><a href="http://otownshowdown.com/g/media/">Photos &amp; Videos</a></li>
+                <li><a href="http://otownshowdown.com/g/history/">Lindy</a></li>
+            </ul>
+        </nav>
+
+        <main class="main_brawler" role="main">
+            <article class="article_brawler" role="article" itemscope="" itemtype="http://schema.org/Article">
+                <header class="postheader_brawler">
+                    <h1 class="posttitle_brawler" itemprop="headline">{{ title }}</h1>
+                </header>
+                <div class="postcontent_brawler" itemprop="articleBody" md>
+
+
+                    <content></content>
+
+
+                </div>
+                <a href="./{{ altPage }}.html">{{ lang == "en" ? "Français" : "English" }}</a>
+            </article>
+        </main>
+
+        <footer class="footer_brawler">
+            <div class="footertext_brawler">
+                <a href="http://otownshowdown.com/">O-Town Showdown</a> © 2016 • All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

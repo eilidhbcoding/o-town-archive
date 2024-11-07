@@ -1,0 +1,19 @@
+{
+    "input": "src/views/*.html",
+    "output": "dist",
+    "plugins": {
+        "posthtml-modules": {
+            "root": "./src/views",
+            "attributeAsLocals": true,
+            "expressions": true,
+            "initial": true
+        },
+        "posthtml-expressions": {
+            "root": "./src/views",
+            "removeScriptLocals": true
+        },
+        "posthtml-md": {
+            "root": "./src/views"
+        }
+    }
+}
