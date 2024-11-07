@@ -12,15 +12,15 @@
                 break;
             case 'results':
                 result.title = "Results";
-                result.altPage = "accueil";
+                result.altPage = "resultats";
                 break;
             case 'media':
                 result.title = "Photos & Videos";
-                result.altPage = "accueil";
+                result.altPage = "photos-videos";
                 break;
             case 'history':
-                result.title = "Lindy";
-                result.altPage = "accueil";
+                result.title = "A Short History of Lindy Hop";
+                result.altPage = "histoire";
                 break;
         }
     } else {
@@ -30,8 +30,17 @@
                 result.altPage = "welcome";
                 break;
             case 'results':
+                result.title = "Résultats";
+                result.altPage = "results";
+                break;
             case 'media':
+                result.title = "Photos & vidéos";
+                result.altPage = "media";
+                break;
             case 'history':
+                result.title = "Petite histoire du Lindy Hop";
+                result.altPage = "history";
+                break;
         }
     }
 
@@ -73,9 +82,12 @@
             <ul>
                 <li><a href="http://otownshowdown.com/g/welcome/"
                         class='{{ page == "welcome" ? "active" : ""}}'>Home</a></li>
-                <li><a href="http://otownshowdown.com/g/results/">Results</a></li>
-                <li><a href="http://otownshowdown.com/g/media/">Photos &amp; Videos</a></li>
-                <li><a href="http://otownshowdown.com/g/history/">Lindy</a></li>
+                <li><a href="http://otownshowdown.com/g/results/"
+                        class='{{ page == "welcome" ? "results" : ""}}'>Results</a></li>
+                <li><a href="http://otownshowdown.com/g/media/" class='{{ page == "media" ? "active" : ""}}'>Photos
+                        &amp; Videos</a></li>
+                <li><a href="http://otownshowdown.com/g/history/"
+                        class='{{ page == "welcome" ? "history" : ""}}'>Lindy</a></li>
             </ul>
         </nav>
 
