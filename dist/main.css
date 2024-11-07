@@ -148,7 +148,6 @@ blockquote {
 .icon-gplus:before,
 .icon-facebook:before {
   font-family: 'icons';
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -860,6 +859,7 @@ table td {
   margin-bottom: 0px;
   margin-right: 6px;
   background-color: #8FB5C1;
+  border-radius: 8px;
   -moz-border-radius: 8px;
 }
 

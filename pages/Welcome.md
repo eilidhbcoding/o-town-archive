@@ -1,11 +1,7 @@
 
-_\* Registration is now closed! You can get an event pass ($215), dance tickets ($35), dance passes ($70), and admission to some competitions at the door. \*_
+O-Town Showdown was an annual weekend of workshops, performances, and social dancing.
 
-Welcome to O-Town Showdown, a phenomenal weekend of competitions in Ottawa focusing on great social dance skills, awesome attitude, creativity, and fun! 
-
-**After a three year hiatus we are thrilled to announce that O-Town is officially BACK!** 
-
-O-Town Showdown will return **March 1-3, 2024** with the amazing **Boilermaker Jazz Band** and we can't wait to see you there!  Check back here for updates and announcements over the coming weeks, and get ready to throw down at the Showdown!
+It ran from 2013 to 2020, with a final hurrah in 2024. This site serves preserve the results of events past and provide access to related information.
 
 <center>
 <p>2019 Highlights video</p>
