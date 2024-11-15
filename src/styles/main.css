@@ -736,7 +736,7 @@ table td {
 }
 
 ._404 {
-  background-image: url('/assets/images/brawler1.jpg');
+  background-image: url('./images/brawler1.jpg');
   width: 577px;
   height: 529px;
   margin: 0 auto;

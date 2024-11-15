@@ -22,6 +22,9 @@
                 result.title = "A Short History of Lindy Hop";
                 result.altPage = "histoire";
                 break;
+            default:
+                result.title = "404";
+                result.altPage = "none";
         }
     } else {
         switch (locals.page) {
@@ -41,6 +44,9 @@
                 result.title = "Petite histoire du Lindy Hop";
                 result.altPage = "history";
                 break;
+            default:
+                result.title = "404";
+                result.altPage = "none";
         }
     }
 
@@ -114,7 +120,9 @@
 
 
                 </div>
-                <a href="./{{ altPage }}.html">{{ lang == "en" ? "Français" : "English" }}</a>
+                <if condition="altPage !== 'none'">
+                    <a href="./{{ altPage }}.html">{{ lang == "en" ? "Français" : "English" }}</a>
+                </if>
             </article>
         </main>
 
