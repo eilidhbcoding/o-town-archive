@@ -963,3 +963,22 @@ textarea.placeholder-text {
 .unused-class {
   color: #F0F
 }
+
+.gallery-item {
+  height: 173px;
+  width: 173px;
+  display: inline-block;
+  padding: 8px;
+}
+
+.gallery-link {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.gallery-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
